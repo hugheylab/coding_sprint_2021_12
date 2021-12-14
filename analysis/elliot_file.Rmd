@@ -1,0 +1,12 @@
+---
+title: "Elliot Analysis"
+author: "ehoutland"
+date: "2021-12-16"
+output: workflowr::wflow_html
+editor_options:
+  chunk_output_type: console
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message=FALSE, warning=FALSE)
+```
+
