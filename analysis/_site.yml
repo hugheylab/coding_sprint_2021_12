@@ -12,7 +12,7 @@ navbar:
   right:
   - icon: fa-github
     text: Source code
-    href: https://github.com/hugheylab/coding_sprint
+    href: https://github.com/hugheylab/coding_sprint_2021_12
 output:
   workflowr::wflow_html:
     toc: yes
