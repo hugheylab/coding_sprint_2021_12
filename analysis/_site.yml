@@ -1,7 +1,7 @@
-name: Coding Sprint
+name: coding_sprint_2021_12
 output_dir: ../docs
 navbar:
-  title: Coding Sprint
+  title: coding_sprint_2021_12
   left:
   - text: Home
     href: index.html
