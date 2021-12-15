@@ -20,11 +20,9 @@ Check out the sample analysis.
 ### Steps:
 
 1. Please add your analyses to your corresponding `.Rmd` file in the analysis folder.
-
-Once you're finished please 
-
-2. Build your page with `wflow_build()`
-3. Deploy your page with `wflow_publish()`
+2. Taking turns, pull from GitHub, keeping changes to your corresponding `.Rmd` file.
+3. Build your page with `wflow_build()`.
+4. Push your changes to GitHub.
 
 
 ## Check out the published pages here:
