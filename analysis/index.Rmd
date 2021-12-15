@@ -10,7 +10,7 @@ editor_options:
 
 #### Website to showcase Coding Sprint from 2021-12-16
 
-Check out the sample analysis.
+Check out the sample analysis-
 
 * [Sample Analysis](sample_analysis.html)
 
