@@ -28,7 +28,29 @@ library(ggplot2)
 
 ```{r load all data}
 movieDT = fread('data/MoviesOnStreamingPlatforms_updated.csv')
+movieDT = movieDT[,-c('V1')]
 head(movieDT, 5)
 ```
 
+## extract numeric values from IMDb and Rotten Tomatoes
+```{r}
+movieDT[, imdb_num := as.numeric(
+  gsub(pattern="\\/(.*)", replacement="", IMDb, perl = TRUE))]
+
+movieDT[, tomatoe_num := as.numeric(
+  gsub(pattern="\\/(.*)", replacement="", `Rotten Tomatoes`, perl = TRUE))]
+``` 
+
+
+## sample analysis
+distribution of the year movies were made in for each streaming platform
+```{r}
+dt = melt(movieDT[,c('ID', 'Year', 'Netflix', 'Hulu', 'Prime Video', 'Disney+')],
+          id.vars = c('ID', 'Year'), variable.name='stream_platform')
+dt = dt[value==1][,-c('value')]
+
+ggplot(dt) + geom_density(aes(x=Year, fill=stream_platform), bw=0.5) + 
+  facet_wrap(~stream_platform, ncol=1) + 
+  labs(title = 'year distribution vs. streaming  platform')
+```
 
