@@ -10,3 +10,37 @@ editor_options:
 knitr::opts_chunk$set(echo = TRUE, message=FALSE, warning=FALSE)
 ```
 
+
+```{r load all data}
+movieDT = fread('data/MoviesOnStreamingPlatforms_updated.csv')
+movieDT = movieDT[,-c('V1')]
+head(movieDT, 5)
+```
+
+
+```{r}
+movieDT[, imdb_num := as.numeric(
+  gsub(pattern="\\/(.*)", replacement="", IMDb, perl = TRUE))]
+
+movieDT[, tomatoe_num := as.numeric(
+  gsub(pattern="\\/(.*)", replacement="", `Rotten Tomatoes`, perl = TRUE))]
+``` 
+
+
+```{r}
+idGenres = movieDT[,.(Genres=unlist(strsplit(Genres, ","))),by=ID]
+idGenres[,.N,by=Genres][order(-N)]
+
+dt = merge(movieDT[,.(ID, Year, imdb_num)], idGenres)
+dt_avg = dt[,.(avg_pop=mean(imdb_num, na.rm = TRUE)),by=.(Genres, Year)]
+
+ggplot(dt_avg[Genres %in% c('Drama', 'Comedy', 'Family', 
+                            'Crime', 'Documentary', 'Adventure', 'War')], 
+       aes(x=Year,y=avg_pop, color=Genres)) + geom_smooth(method=lm, se=FALSE) +
+  labs(title = "popularity trend of different movie genres", y="averge popularity (IMDb)")
+```
+
+```{r}
+
+```
+
