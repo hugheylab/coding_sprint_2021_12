@@ -367,7 +367,7 @@ div.tocify {
 
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
-<span class="glyphicon glyphicon-list" aria-hidden="true"></span> workflowr <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
+<span class="glyphicon glyphicon-list" aria-hidden="true"></span> workflowr <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span>
 </button>
 </p>
 <div id="workflowr-report" class="collapse">
@@ -376,7 +376,7 @@ div.tocify {
 <a data-toggle="tab" href="#summary">Summary</a>
 </li>
 <li>
-<a data-toggle="tab" href="#checks"> Checks <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> </a>
+<a data-toggle="tab" href="#checks"> Checks <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> </a>
 </li>
 <li>
 <a data-toggle="tab" href="#versions">Past versions</a>
@@ -385,10 +385,10 @@ div.tocify {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2021-12-15
+<strong>Last updated:</strong> 2021-12-17
 </p>
 <p>
-<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
+<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 1
 </p>
 <p>
 <strong>Knit directory:</strong> <code>coding_sprint_2021_12/</code> <span class="glyphicon glyphicon-question-sign" aria-hidden="true" title="This is the local directory in which the code in this file was executed."> </span>
@@ -404,12 +404,12 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguncommittedchanges"> <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> <strong>R Markdown file:</strong> uncommitted changes </a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguptodate" class="panel-collapse collapse">
+<div id="strongRMarkdownfilestronguncommittedchanges" class="panel-collapse collapse">
 <div class="panel-body">
-<p>Great! Since the R Markdown file has been committed to the Git repository, you know the exact version of the code that produced these results.</p>
+<p>The R Markdown file has unstaged changes. To know which version of the R Markdown file created these results, you’ll want to first commit it to the Git repo. If you’re still working on the analysis, you can ignore this warning. When you’re finished, you can run <code>wflow_publish</code> to commit the R Markdown file and build the HTML.</p>
 </div>
 </div>
 </div>
@@ -476,23 +476,23 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomhugheylabcodingsprint202112tree5cb704a5bfb3aba2ca32fba7765356b3e48e04batargetblank5cb704aa"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/hugheylab/coding_sprint_2021_12/tree/5cb704a5bfb3aba2ca32fba7765356b3e48e04ba" target="_blank">5cb704a</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomhugheylabcodingsprint202112treed5547af7bd795f190afdb58b95f9c91d6ef87a04targetblankd5547afa"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/hugheylab/coding_sprint_2021_12/tree/d5547af7bd795f190afdb58b95f9c91d6ef87a04" target="_blank">d5547af</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomhugheylabcodingsprint202112tree5cb704a5bfb3aba2ca32fba7765356b3e48e04batargetblank5cb704aa" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomhugheylabcodingsprint202112treed5547af7bd795f190afdb58b95f9c91d6ef87a04targetblankd5547afa" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/hugheylab/coding_sprint_2021_12/tree/5cb704a5bfb3aba2ca32fba7765356b3e48e04ba" target="_blank">5cb704a</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/hugheylab/coding_sprint_2021_12/tree/d5547af7bd795f190afdb58b95f9c91d6ef87a04" target="_blank">d5547af</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
 </p>
 <pre><code>
-Ignored files:
-    Ignored:    .Rproj.user/
+Unstaged changes:
+    Modified:   analysis/elliot_file.Rmd
 
 </code></pre>
 <p>
@@ -536,6 +536,23 @@ Message
 html
 </td>
 <td>
+<a href="https://rawcdn.githack.com/hugheylab/coding_sprint_2021_12/299b1b2b56682a20b6f739e6740f7637dfafbbca/docs/elliot_file.html" target="_blank">299b1b2</a>
+</td>
+<td>
+Josh Schoenbachler
+</td>
+<td>
+2021-12-15
+</td>
+<td>
+Build site.
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
 <a href="https://rawcdn.githack.com/hugheylab/coding_sprint_2021_12/ef1b116fd06c388daffde9c3313f3f9ca2468345/docs/elliot_file.html" target="_blank">ef1b116</a>
 </td>
 <td>
@@ -572,6 +589,29 @@ Initial commit
 </div>
 </div>
 </div>
+<p>Loading packages</p>
+<pre class="r"><code>library(data.table)
+library(ggplot2)</code></pre>
+<p>Loading/manipulating data</p>
+<pre class="r"><code>data = fread(file.path(&#39;data/MoviesOnStreamingPlatforms_updated.csv&#39;))
+
+data[, imdb_num := as.numeric(
+  gsub(pattern=&quot;\\/(.*)&quot;, replacement=&quot;&quot;, IMDb, perl = TRUE))]
+data[, tomato_num := as.numeric(
+  gsub(pattern=&quot;\\/(.*)&quot;, replacement=&quot;&quot;, `Rotten Tomatoes`, perl = TRUE))]
+
+dataMelt = melt(
+  data[, .(ID, Year, tomato_num, imdb_num = imdb_num*10, Netflix, Hulu, `Prime Video`, `Disney+`)], 
+  id.vars = c(&#39;ID&#39;, &#39;Year&#39;, &#39;tomato_num&#39;, &#39;imdb_num&#39;), variable.name = &#39;platform&#39;)
+dataMelt = dataMelt[value != 0]
+dataMelt = dataMelt[, .(rt_mean = mean(tomato_num), imdb_mean = mean(imdb_num)), .(platform, Year)]
+dataMelt = melt(dataMelt, id.vars = c(&#39;platform&#39;, &#39;Year&#39;), variable.name = &#39;score_type&#39;)</code></pre>
+<p>IMDB vs Rotten Tomato score by year by platform</p>
+<pre class="r"><code>ggplot() +
+  geom_line(data = dataMelt, mapping = aes(x = Year, y = value, linetype = score_type)) +
+  facet_grid(vars(platform)) +
+  labs(y = &#39;Avg. Rotten Tomato Score&#39;)</code></pre>
+<p><img src="figure/elliot_file.Rmd/unnamed-chunk-3-1.png" width="672" style="display: block; margin: auto;" /></p>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -580,12 +620,12 @@ Initial commit
 </p>
 <div id="workflowr-sessioninfo" class="collapse">
 <pre class="r"><code>sessionInfo()</code></pre>
-<pre><code>R version 4.1.0 (2021-05-18)
+<pre><code>R version 4.1.1 (2021-08-10)
 Platform: x86_64-apple-darwin17.0 (64-bit)
 Running under: macOS Big Sur 10.16
 
 Matrix products: default
-BLAS:   /Library/Frameworks/R.framework/Versions/4.1/Resources/lib/libRblas.dylib
+BLAS:   /Library/Frameworks/R.framework/Versions/4.1/Resources/lib/libRblas.0.dylib
 LAPACK: /Library/Frameworks/R.framework/Versions/4.1/Resources/lib/libRlapack.dylib
 
 locale:
@@ -594,17 +634,24 @@ locale:
 attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
+other attached packages:
+[1] ggplot2_3.3.5     data.table_1.14.2
+
 loaded via a namespace (and not attached):
- [1] Rcpp_1.0.7       whisker_0.4      knitr_1.36       magrittr_2.0.1  
- [5] workflowr_1.6.2  R6_2.5.1         rlang_0.4.12     fastmap_1.1.0   
- [9] fansi_0.5.0      stringr_1.4.0    tools_4.1.0      xfun_0.28       
-[13] utf8_1.2.2       git2r_0.29.0     jquerylib_0.1.4  htmltools_0.5.2 
-[17] ellipsis_0.3.2   rprojroot_2.0.2  yaml_2.2.1       digest_0.6.28   
-[21] tibble_3.1.6     lifecycle_1.0.1  crayon_1.4.2     later_1.3.0     
-[25] sass_0.4.0       vctrs_0.3.8      fs_1.5.0         promises_1.2.0.1
-[29] glue_1.5.0       evaluate_0.14    rmarkdown_2.11   stringi_1.7.5   
-[33] bslib_0.3.1      compiler_4.1.0   pillar_1.6.4     jsonlite_1.7.2  
-[37] httpuv_1.6.3     pkgconfig_2.0.3 </code></pre>
+ [1] Rcpp_1.0.7       highr_0.9        pillar_1.6.4     compiler_4.1.1  
+ [5] bslib_0.3.1      later_1.3.0      jquerylib_0.1.4  git2r_0.29.0    
+ [9] workflowr_1.6.2  tools_4.1.1      digest_0.6.29    gtable_0.3.0    
+[13] jsonlite_1.7.2   evaluate_0.14    lifecycle_1.0.1  tibble_3.1.6    
+[17] pkgconfig_2.0.3  rlang_0.4.12     DBI_1.1.1        yaml_2.2.1      
+[21] xfun_0.28        fastmap_1.1.0    withr_2.4.3      dplyr_1.0.7     
+[25] stringr_1.4.0    knitr_1.36       generics_0.1.1   fs_1.5.2        
+[29] vctrs_0.3.8      sass_0.4.0       tidyselect_1.1.1 rprojroot_2.0.2 
+[33] grid_4.1.1       glue_1.5.1       R6_2.5.1         fansi_0.5.0     
+[37] rmarkdown_2.11   farver_2.1.0     purrr_0.3.4      magrittr_2.0.1  
+[41] whisker_0.4      scales_1.1.1     promises_1.2.0.1 ellipsis_0.3.2  
+[45] htmltools_0.5.2  assertthat_0.2.1 colorspace_2.0-2 httpuv_1.6.4    
+[49] labeling_0.4.2   utf8_1.2.2       stringi_1.7.6    munsell_0.5.0   
+[53] crayon_1.4.2    </code></pre>
 </div>
 
 
