@@ -10,3 +10,55 @@ editor_options:
 knitr::opts_chunk$set(echo = TRUE, message=FALSE, warning=FALSE)
 ```
 
+## Introduction
+
+All data files are located within the `data` folder. The data consist of movie titles, their availability on streaming platforms (Netflix, Prime Video, Hulu, and Disney+).
+
+The source can be found [here](https://www.kaggle.com/ruchi798/movies-on-netflix-prime-video-hulu-and-disney).
+
+## Load data
+
+Load data example here.
+
+```{r load libraries}
+library(data.table)
+library(ggplot2)
+```
+
+Read data, filter to last 50 years, and add service column
+```{r load all data}
+movieDT = fread('data/MoviesOnStreamingPlatforms_updated.csv')
+movieDT = movieDT[,-c('V1')]
+movieDT = movieDT[Year >= 1971,]
+movieDT[, service := ""]
+movieDT[Netflix == 1, service := "Netflix"]
+movieDT[Hulu == 1, service := "Hulu"]
+movieDT[`Prime Video` == 1, service := "Prime Video"]
+movieDT[`Disney+` == 1, service := "Disney+"]
+movieDT[(Netflix + Hulu + `Prime Video` + `Disney+`) > 1, service := "Multiple"]
+```
+
+## Extract numeric values from IMDb and Rotten Tomatoes
+```{r}
+movieDT[, imdb_num := as.numeric(
+  gsub(pattern="\\/(.*)", replacement="", IMDb, perl = TRUE))]
+
+movieDT[, tomatoe_num := as.numeric(
+  gsub(pattern="\\/(.*)", replacement="", `Rotten Tomatoes`, perl = TRUE))]
+``` 
+## Plots
+### Number of movies in each streaming service by decade
+```{r}
+ggplot(movieDT, aes(x = Year, fill = service)) + geom_bar(stat="bin", binwidth = 10)
+```
+
+### Number of movies in each streaming service by IMDB score
+```{r}
+ggplot(movieDT, aes(x = imdb_num, fill = service)) + geom_bar(stat="bin", binwidth = 1.0)
+```
+
+### Number of movies in each streaming service by Rotten Tomatoes Score
+```{r}
+ggplot(movieDT, aes(x = tomatoe_num, fill = service)) + geom_bar(stat="bin", binwidth = 10)
+```
+
