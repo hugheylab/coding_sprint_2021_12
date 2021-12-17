@@ -21,7 +21,6 @@ library(workflowr)
 ```
 
 
-
 ```{r load all data}
 movieDT = fread('data/MoviesOnStreamingPlatforms_updated.csv')
 movieDT = movieDT[,-c('V1')]

@@ -476,16 +476,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomhugheylabcodingsprint202112treebfe2a13fec592415fac712564609b4484d55f8catargetblankbfe2a13a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/hugheylab/coding_sprint_2021_12/tree/bfe2a13fec592415fac712564609b4484d55f8ca" target="_blank">bfe2a13</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomhugheylabcodingsprint202112tree12471d2170258e56e5de627ad279abf3c428d29atargetblank12471d2a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/hugheylab/coding_sprint_2021_12/tree/12471d2170258e56e5de627ad279abf3c428d29a" target="_blank">12471d2</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomhugheylabcodingsprint202112treebfe2a13fec592415fac712564609b4484d55f8catargetblankbfe2a13a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomhugheylabcodingsprint202112tree12471d2170258e56e5de627ad279abf3c428d29atargetblank12471d2a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/hugheylab/coding_sprint_2021_12/tree/bfe2a13fec592415fac712564609b4484d55f8ca" target="_blank">bfe2a13</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/hugheylab/coding_sprint_2021_12/tree/12471d2170258e56e5de627ad279abf3c428d29a" target="_blank">12471d2</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -493,9 +493,6 @@ Note that you need to be careful to ensure that all relevant files for the analy
 <pre><code>
 Ignored files:
     Ignored:    .Rproj.user/
-
-Untracked files:
-    Untracked:  analysis/figure/
 
 Unstaged changes:
     Modified:   analysis/dora_file.Rmd
@@ -537,6 +534,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/hugheylab/coding_sprint_2021_12/blob/7f44d34f399776e18ab1fd5d776681ca937fa537/analysis/dora_file.Rmd" target="_blank">7f44d34</a>
+</td>
+<td>
+doraaobodo
+</td>
+<td>
+2021-12-17
+</td>
+<td>
+build workflow
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/hugheylab/coding_sprint_2021_12/7f44d34f399776e18ab1fd5d776681ca937fa537/docs/dora_file.html" target="_blank">7f44d34</a>
+</td>
+<td>
+doraaobodo
+</td>
+<td>
+2021-12-17
+</td>
+<td>
+build workflow
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -672,6 +703,43 @@ movieDT[, tomatoe_num := as.numeric(
 movieDT = movieDT[value == 1]
 ggplot(movieDT, aes(x = imdb_num, y = tomatoe_num)) + geom_point() + facet_wrap(~platform)</code></pre>
 <p><img src="figure/dora_file.Rmd/scatter%20of%20platform-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-scatter-of-platform-1">
+Past versions of “scatter of platform-1.png”
+</button>
+</p>
+<div id="fig-no-spaces-scatter-of-platform-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/hugheylab/coding_sprint_2021_12/blob/7f44d34f399776e18ab1fd5d776681ca937fa537/docs/figure/dora_file.Rmd/scatter of platform-1.png" target="_blank">7f44d34</a>
+</td>
+<td>
+doraaobodo
+</td>
+<td>
+2021-12-17
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 <div id="which-genre-of-movies-tend-to-score-higher-per-platform" class="section level3">
 <h3>Which Genre of movies tend to score higher per platform</h3>
@@ -679,6 +747,43 @@ ggplot(movieDT, aes(x = imdb_num, y = tomatoe_num)) + geom_point() + facet_wrap(
 countGenres = countGenres[N &gt; 50]
 ggplot(countGenres, aes(x = platform, y = N)) + geom_bar(stat = &#39;identity&#39;) + facet_wrap(~Genres)</code></pre>
 <p><img src="figure/dora_file.Rmd/scatter%20of%20movies-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-scatter-of-movies-1">
+Past versions of “scatter of movies-1.png”
+</button>
+</p>
+<div id="fig-no-spaces-scatter-of-movies-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/hugheylab/coding_sprint_2021_12/blob/7f44d34f399776e18ab1fd5d776681ca937fa537/docs/figure/dora_file.Rmd/scatter of movies-1.png" target="_blank">7f44d34</a>
+</td>
+<td>
+doraaobodo
+</td>
+<td>
+2021-12-17
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
