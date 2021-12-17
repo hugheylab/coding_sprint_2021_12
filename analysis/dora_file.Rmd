@@ -17,8 +17,8 @@ Load data example here.
 ```{r load libraries}
 library(data.table)
 library(ggplot2)
+library(workflowr)
 ```
-
 
 
 
@@ -39,7 +39,7 @@ movieDT[, tomatoe_num := as.numeric(
 
 ### Are rating scores correlated to each other on each platform?
 
-```{r scatter of }
+```{r scatter of platform}
 movieDT = melt(movieDT, measure.vars = c("Netflix","Hulu","Prime Video","Disney+"), 
                variable.name = 'platform')
 movieDT = movieDT[value == 1]
@@ -48,9 +48,9 @@ ggplot(movieDT, aes(x = imdb_num, y = tomatoe_num)) + geom_point() + facet_wrap(
 
 
 ### Which Genre of movies tend to score higher per platform
-```{r scatter of }
+```{r scatter of movies}
 countGenres = movieDT[, .N, by = .(platform, Genres)]
-countGenres = coountGenres[N > 50]
-ggplot(coountGenres, aes(x = platform, y = N)) + geom_bar(stat = 'identity') + facet_wrap(~Genres)
+countGenres = countGenres[N > 50]
+ggplot(countGenres, aes(x = platform, y = N)) + geom_bar(stat = 'identity') + facet_wrap(~Genres)
 
 ```
